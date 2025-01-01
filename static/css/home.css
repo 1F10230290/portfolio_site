@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: blanchedalmond;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.account-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 100px;
+    width: auto;
+    background-color: azure;
+    border-radius: 50%;
+}
+
+.Game_screen {
+    height: 400px;
+    width: auto;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
+
+/* ボタンコンテナ */
+.button-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    font-size: 24px;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative; /* ボタンの位置調整 */
+    left: 150px; /* 左側に配置 */
+}
+
+.prev-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.next-btn {
+    font-size: 24px;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative; /* ボタンの位置調整 */
+    right: 150px; /* 左側に配置 */
+}
+
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

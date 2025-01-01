@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="{% static 'js/home.js' %}"></script>
+    <title>Timeline</title>
+  </head>
+
+  <body>
+    <!-- アカウント画像を表示 -->
+    <div class="account-container">
+      <img src="{% static 'img/account.png' %}" alt="Account Image" class="account-image">
+    </div>
+
+
+    <div class="image-container">
+      <img id="content-image" src="{% static 'img/Game_screen.png' %}" alt="Game_screen" class="Game_screen">
+      <div id="overlay-text" class="overlay-text">松原 有泰が制作した物</div>
+      <div class="button-container">
+        <button class="prev-btn" onclick="changeContent('prev')">←</button>
+        <div id="Game">ゲーム制作</div>
+        <button class="next-btn" onclick="changeContent('next')">→</button>
+      </div>
+    </div>
+  </body>
+</html>
