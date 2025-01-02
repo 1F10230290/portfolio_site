@@ -31,7 +31,7 @@ body {
 
 .overlay-text {
     position: absolute;
-    top: 85px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     color: yellow;
@@ -51,7 +51,7 @@ body {
     transform: translateY(-50%);
 }
 
-.prev-btn {
+.prev-btn, .next-btn {
     font-size: 24px;
     background-color: rgba(255, 0, 0, 0.5);
     color: white;
@@ -59,26 +59,32 @@ body {
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-    position: relative; /* ボタンの位置調整 */
-    left: 150px; /* 左側に配置 */
+    width: 40px; /* ボタンの幅を指定 */
+    height: 140px; /* ボタンの高さを指定 */
+    text-align: center;
 }
 
-.prev-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+.prev-btn{
+    position:relative;
+    top: 80px;
+    left: 150px;
 }
 
-.next-btn {
-    font-size: 24px;
-    background-color: rgba(255, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    position: relative; /* ボタンの位置調整 */
-    right: 150px; /* 左側に配置 */
+.next-btn{
+    position:relative;
+    top: 80px;
+    right: 150px;
 }
 
-.next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(200, 0, 0, 0.5);
+}
+
+
+.works_image{
+    padding-top: 30px;
+    height: 250px;
+    width: auto;
+    display: block;
 }
