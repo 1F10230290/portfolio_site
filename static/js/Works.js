@@ -15,3 +15,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);  // ここはCSSのtransitionの時間と一致させる
     });
 });
+
+let currentIndex = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+
+  // Remove the active class from all slides and dots
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  // Add the active class to the selected slide and dot
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+}
+
+function currentSlide(index) {
+  currentIndex = index;
+  showSlide(currentIndex);
+}
