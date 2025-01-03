@@ -29,10 +29,15 @@ body {
 
 .container {
     display: grid;
-    grid-auto-flow: column; /* 横並び */
-    gap: 20px; /* 要素間の間隔 */
-    position: absolute;
+    grid-auto-flow: column;
+    gap: 20px;
+    justify-content: center; 
+    align-items: center;
+    width: 100%; 
+    margin: 0 auto;
+    position: relative; 
 }
+
 
 .Game {
     height: 200px;
@@ -42,10 +47,11 @@ body {
 
 .slider {
     position: relative;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
-    top: 5%; /* 画面上部からの位置 */
+    top: 3%; /* 画面上部からの位置 */
+    left: 100px;
 }
 
 .slides {
@@ -69,7 +75,7 @@ body {
     text-align: center;
     margin-top: 10px; /* 写真とドットの間隔 */
     position: relative; /* スライダー内に配置 */
-
+    right: 60px;
 }
 
 .dot {
@@ -87,19 +93,26 @@ body {
 }
 
 
-.explanation-box {
-    border-top: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
-    width: 400px;
-    height: 100px;
-    position: absolute;
-    right:10%;
-    top:25%;
+.explanation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
 }
 
-.explanation-box h2 {
+.explanation-box, .explanation-box_me {
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 2px solid gray;
+    top:20px
+}
+
+
+
+.explanation-box h2{
     margin: 0;
     padding: 0;
     background-color: aqua;
@@ -108,17 +121,6 @@ body {
 }
 
 
-.explanation-box_me {
-    border-top: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
-    width: 400px;
-    height: 100px;
-    position: absolute;
-    right:10%;
-    top:50%;
-}
 
 .explanation-box_me h2 {
     margin: 0;
