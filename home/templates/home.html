@@ -19,11 +19,16 @@
     <div class="image-container">
       <img id="content-image" src="{% static 'img/Game_screen.png' %}" alt="Game_screen" class="Game_screen">
       <div id="overlay-text" class="overlay-text">松原 有泰が制作した物</div>
-      <div class="button-container">
-        <button class="prev-btn">←</button>
-        <img src="{% static 'img/Works_game.png' %}" alt="Works_game Image" class="works_image">
-        <button class="next-btn">→</button>
+      <div id="myElement" class="fadein">
+        <a href="{% url 'Works_game' %}"><img src="{% static 'img/Works_Game.png' %}" alt="Works 1" class="works_item active"></a>
+        <img src="{% static 'img/Works_App.png' %}" alt="Works 2" class="works_item">
+        <img src="{% static 'img/Works_UXDesign.png' %}" alt="Works 3" class="works_item">
+        <img src="{% static 'img/Works_Other.png' %}" alt="Works 4" class="works_item">        
       </div>
+        <div class="button-container">
+          <button class="prev-btn">←</button>
+          <button class="next-btn">→</button>
+        </div>
     </div>
   </body>
 </html>

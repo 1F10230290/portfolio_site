@@ -44,7 +44,7 @@ body {
 /* ボタンコンテナ */
 .button-container {
     position: absolute;
-    top: 50%;
+    top: 35%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -82,9 +82,37 @@ body {
 }
 
 
-.works_image{
-    padding-top: 30px;
-    height: 250px;
-    width: auto;
-    display: block;
+.works_item {
+    position: absolute; /* ここはそのまま */
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    opacity: 0; /* 初期状態で非表示 */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 1; /* 重なり順 */
+}
+
+.works_item.active {
+    opacity: 1; /* 表示 */
+    transform: translate(-50%, -50%); /* 中央に配置 */
+    z-index: 2; /* 他のアイテムの前に表示 */
+}
+
+.works_item.move-left {
+    transform: translate(-150%, -50%); /* 左にスライド */
+    opacity: 0; /* フェードアウト */
+    z-index: 0; /* 他のアイテムの後ろに配置 */
+}
+
+.works_item.move-right {
+    transform: translate(150%, -50%); /* 右にスライド */
+    opacity: 0; /* フェードアウト */
+    z-index: 0; /* 他のアイテムの後ろに配置 */
+}
+
+.works_item.slide-in {
+    transform: translate(-50%, -50%); /* 中央にスライドイン */
+    opacity: 1; /* フェードイン */
+    z-index: 2; /* 他のアイテムの前に表示 */
 }

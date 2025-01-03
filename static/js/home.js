@@ -1,29 +1,46 @@
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.works_item');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    let currentIndex = 0;
 
-const contents = [
-    {
-        image: "{% static 'img/Game_screen.png' %}",
-        text: "松原 有泰が制作した物"
-    },
-    {
-        image: "{% static 'img/another_image.png' %}",  // 他の画像のパスを追加
-        text: "別の制作物"
-    },
-    {
-        image: "{% static 'img/another_image2.png' %}",  // 他の画像のパスを追加
-        text: "さらに別の制作物"
-    },
-    // 必要に応じて追加
-];
+    function updateClasses(current, next, direction) {
+        // 現在表示中のWorksをスライドアウト
+        current.classList.remove('active');
+        if (direction === 'right') {
+            current.classList.add('move-left'); // 右から左へスライドアウト
+        } else {
+            current.classList.add('move-right'); // 左から右へスライドアウト
+        }
 
-function changeContent(direction) {
-    if (direction === 'next') {
-        currentIndex = (currentIndex + 1) % contents.length;
-    } else if (direction === 'prev') {
-        currentIndex = (currentIndex - 1 + contents.length) % contents.length;
+        // 次のWorksをスライドイン
+        next.classList.remove('move-left', 'move-right');
+        next.classList.add('slide-in'); // 中央にスライドイン
+        next.classList.add('active'); // 表示
+
+        // スライドインのアニメーションが終わった後、次のアイテムを準備
+        setTimeout(() => {
+            next.classList.remove('slide-in');
+            next.classList.add('active'); // 常に表示
+            current.classList.remove('move-left', 'move-right'); // 元に戻す
+        }, 500); // アニメーション時間と一致させる
     }
 
-    // 画像とテキストを更新
-    document.getElementById("content-image").src = contents[currentIndex].image;
-    document.getElementById("overlay-text").textContent = contents[currentIndex].text;
-}
+    nextBtn.addEventListener('click', () => {
+        const currentItem = items[currentIndex];
+        const nextIndex = (currentIndex + 1) % items.length;
+        const nextItem = items[nextIndex];
+
+        updateClasses(currentItem, nextItem, 'right');
+        currentIndex = nextIndex;
+    });
+
+    prevBtn.addEventListener('click', () => {
+        const currentItem = items[currentIndex];
+        const prevIndex = (currentIndex - 1 + items.length) % items.length;
+        const prevItem = items[prevIndex];
+
+        updateClasses(currentItem, prevItem, 'left');
+        currentIndex = prevIndex;
+    });
+});

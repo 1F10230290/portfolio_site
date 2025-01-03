@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="{% static 'js/home.js' %}"></script>
+    <title>Timeline</title>
+  </head>
+
+  <body>
+    <!-- アカウント画像を表示 -->
+    <div class="account-container">
+      <img src="{% static 'img/account.png' %}" alt="Account Image" class="account-image">
+    </div>
+
+      <div class="container">
+        <div class="slide current">コンテンツ1</div>
+        <div class="slide">コンテンツ2</div>
+    </div>
+        <div class="button-container">
+          <button class="prev-btn">←</button>
+          <button class="next-btn">→</button>
+        </div>
+  </body>
+</html>
