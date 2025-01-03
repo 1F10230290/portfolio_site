@@ -4,8 +4,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: blanchedalmond;
     position: relative;
+    background-image: url("../img/background/desk.jpg");
+    background-size: cover; /* 画面全体に画像を表示 */
+    background-position: center; /* 画像を中央に配置 */
 }
 
 .image-container {
