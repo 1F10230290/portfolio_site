@@ -1,25 +1,41 @@
-.container {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     position: relative;
-    width: 300px;  /* コンテンツ幅 */
-    overflow: hidden;
+    background-color: black;
 }
 
-.slide {
+#title {
+    color: aqua;
     position: absolute;
-    width: 100%;
-    transition: transform 0.5s ease;
-    left: 100%;  /* スライドが右側に隠れる初期位置 */
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
 }
 
-.slide.current {
-    left: 0;
+
+.back-btn {
+    height: 120px;
+    width: auto;
+    background-color: transparent;
+    position: absolute;
+    top: 2%;
+    left: 2%;
 }
 
-.slide.out {
-    transform: translateX(-100%);  /* 左側にスライドアウト */
+.container {
+    display: grid;
+    grid-auto-flow: column; /* 横並び */
+    gap: 20px; /* 要素間の間隔 */
+    position: absolute;
 }
 
-.slide.incoming {
-    transform: translateX(-100%);  /* 中央にスライドイン */
-    left: 0;
+.Game {
+    height: 200px;
+    width: 200px;
+    background-color: lightblue; /* 見やすいように背景を設定 */
 }
