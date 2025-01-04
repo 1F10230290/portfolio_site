@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Achievements.css' %}">
+    <script src="{% static 'js/Works.js' %}"></script>
+    <title>Timeline</title>
+  </head>
+
+  <body>
+    <a href="{% url 'home' %}"><img src="{% static 'img/Arrow.png' %}" class="back-btn"></a>
+    <h1 id="title">実績</h1>
+    <div class="Achievements-container">
+        <h2>情報連携学部学生表彰</h2>
+        <p>2024年6月|学業成績優秀者</p>
+        <h2>ITパスポート</h2>
+        <p>2024年11月|取得</p>
+    </div>
+  </body>
+</html>

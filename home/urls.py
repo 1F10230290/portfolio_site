@@ -8,4 +8,6 @@ urlpatterns = [
     path('GBW', views.GBW, name='GBW'),
     path('Collider', views.Collider, name='Collider'),
     path('E_Racer', views.E_Racer, name='E_Racer'),
+    path('Achievements', views.Achievements, name='Achievements'),
+    path('Profile', views.Profile, name='Profile'),
 ]

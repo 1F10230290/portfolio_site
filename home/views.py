@@ -19,3 +19,9 @@ def Collider(request):
 
 def E_Racer(request):
     return render(request, 'E_Racer.html')
+
+def Achievements(request):
+    return render(request, 'Achievements.html')
+
+def Profile(request):
+    return render(request, 'Profile.html')

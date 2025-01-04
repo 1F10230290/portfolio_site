@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <img id="content-image" src="{% static 'img/Achievements.png' %}" alt="Achievements" class="Achievements">
+    <a href="{% url 'Achievements' %}"><img id="content-image" src="{% static 'img/Achievements.png' %}" alt="Achievements" class="Achievements"></a>
 
     <div class="image-container">
       <img id="content-image" src="{% static 'img/Game_screen.png' %}" alt="Game_screen" class="Game_screen">
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <img id="content-image" src="{% static 'img/Profile.png' %}" alt="Profile" class="Profile">
+    <a href="{% url 'Profile' %}"><img id="content-image" src="{% static 'img/Profile.png' %}" alt="Profile" class="Profile"></a>
 
   </body>
 </html>

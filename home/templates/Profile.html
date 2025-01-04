@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Profile.css' %}">
+    <script src="{% static 'js/Works.js' %}"></script>
+    <title>Timeline</title>
+  </head>
+
+  <body>
+    <a href="{% url 'home' %}"><img src="{% static 'img/Arrow.png' %}" class="back-btn"></a>
+    <h1 id="title">松原 有泰のプロフィール</h1>
+
+    <img id="Face_photo" src="{% static 'img/Face_photo.jpg' %}">
+
+    <div class="Achievements-container">
+        <div class="personal_info">
+            <p>email: y1u2t1a3---tky@ezweb.ne.jp</p>
+            <p>TEL: 080-6682-4426
+            <p>X: <a href="https://x.com/MY468_iniad7">@MY468_iniad7</p></a>
+            <p>GitHub: <a href="https://github.com/1F10230290">1F10230290</p></a>
+            <p>Unityroom: <a href="https://unityroom.com/users/tjw1hu5k80dyvecmnx2q">@tjw1hu5k80dyvecmnx2q</p></a>
+        </div>
+
+        <div class="above">
+        <div class="topic">
+            <h2>経歴</h2>
+            <p>2023年3月 横浜隼人高校を卒業</p>
+            <p>2023年4月 東洋大学情報連携学部に入学</p>
+            <p>2023年5月 ゲーム制作サークルIGC²に入会</p>
+            <p>2024年7月 IGC²の副サークル長に就く</p>
+        </div>
+
+        <div class="topic">
+            <h2>スキル</h2>
+            <h3>プログラミング言語</h3>
+            <p>Python, C#, C言語, JavaScript</p>
+            
+            <h3>開発環境</h3>
+            <p>Django, Unity</p>
+        </div>
+        <div class="topic">
+            <h2>パーソナリティ</h2>
+            <h3>専門科目</h3>
+            <p>コンピュータ・ソフトウェア</p>
+            <p>ユーザ・エクスペリエンス</p>
+
+            <h3>趣味</h3>
+            <p>ゲーム, 読書, 散歩, 音楽</p>
+        </div>
+
+        </div>
+
+        <div class="under">
+        <div class="topic">
+            <h2>興味のある分野</h2>
+            <p>ゲーム制作(開発、企画), システムインテグレータ, DX</p>
+        </div>
+        </div>
+
+        <div id="hidden">
+        <p>隠しコマンド:BAY</p>
+        </div>
+    </div>
+  </body>
+</html>

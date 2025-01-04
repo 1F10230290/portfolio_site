@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    background-color:aliceblue;
+}
+
+#title {
+    color: black;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
+}
+
+
+.back-btn {
+    height: 120px;
+    width: auto;
+    background-color: transparent;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
