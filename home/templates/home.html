@@ -10,7 +10,12 @@
   </head>
 
   <body>
-    <a href="{% url 'Achievements' %}"><img id="content-image" src="{% static 'img/Achievements.png' %}" alt="Achievements" class="Achievements"></a>
+    <div class="image-container">
+      <span class="tooltip-text-a">松原 有泰の実績</span>
+      <a href="{% url 'Achievements' %}">
+        <img id="content-image" src="{% static 'img/Achievements.png' %}" alt="Achievements" class="Achievements">
+      </a>
+    </div>
 
     <div class="image-container">
       <div class="Game_screen">
@@ -27,7 +32,11 @@
       </div>
     </div>
 
+    <div class="image-container">
+      <span class="tooltip-text-p">松原 有泰のプロフィール</span>
     <a href="{% url 'Profile' %}"><img id="content-image" src="{% static 'img/Profile.png' %}" alt="Profile" class="Profile"></a>
+    </div>
+
 
   </body>
 </html>

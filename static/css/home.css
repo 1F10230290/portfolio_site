@@ -31,8 +31,8 @@ body {
     width: auto;
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform-origin: center center; /* 基準は中央にしておく */
-    display: inline-block;
+    transform-origin: center center; /* 基準を中央に */
+    position: relative; /* ツールチップとの相対位置用 */
 }
 
 .overlay-text {
@@ -123,33 +123,34 @@ body {
     z-index: 2; /* 他のアイテムの前に表示 */
 }
 
-.Game_screen:hover
-{
-    transform: scale(1.03);
+.Game_screen:hover {
+    transform: scale(1.03); /* 少し大きくする */
     cursor: pointer;
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out; 
-  }
+}
+
+.Game_screen:hover .tooltip-text {
+    visibility: visible; /* ツールチップを表示 */
+    opacity: 1; /* 透明度を1にする */
+    transition: opacity 0.3s ease-in-out; /* フェードイン */
+}
 
   .Achievements {
     position: absolute;
-    top: -60px;
-    left: -30px;
+    top: -120px;
+    right: 30px;
     height: 300px;
     width: auto;
-    transform: rotate(30deg); /* 初期回転 */
 }
 
 .Achievements:hover {
-    transform: rotate(30deg) scale(1.03); /* 回転を維持しつつ拡大 */
+    transform: scale(1.03); /* 回転を維持しつつ拡大 */
     cursor: pointer; /* クリックできることを強調 */
 }
 
 .Profile{
     position: absolute;
     top: 50px;
-    right: 20px;
+    left: 30px;
     height: 120px;
     width: auto;
 }
@@ -215,16 +216,17 @@ body {
 
 /* ツールチップのスタイル */
 .tooltip-text {
-    visibility: hidden;
-    background-color: #000;
-    color: yellow;
+    visibility: hidden; /* デフォルトでは非表示 */
+    opacity: 0; /* 透明にする */
+    background-color: #000; /* 背景色 */
+    color: yellow; /* テキストの色 */
     text-align: center;
     padding: 5px 10px;
     border-radius: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 101%;
-    left: 35%;
+    bottom: 102%; /* ツールチップの位置 */
+    left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
     font-size: 20px;
@@ -240,5 +242,81 @@ body {
     transform: translateX(-50%);
     border-width: 10px;
     border-style: solid;
-    border-color: #000 transparent transparent transparent; /* 三角形を作成 */
+    border-color: #000 transparent transparent transparent; /* 矢印を作成 */
+}
+
+.image-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-text-a {
+    visibility: hidden; /* デフォルトでは非表示 */
+    opacity: 0; /* 透明にする */
+    background-color: #000; /* 背景色 */
+    color: yellow; /* テキストの色 */
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -175px; /* ツールチップの位置 */
+    right: -22px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tooltip-text-a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 40%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent; /* 矢印を作成 */
+}
+
+.image-container:hover .tooltip-text-a {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-text-p {
+    visibility: hidden; /* デフォルトでは非表示 */
+    opacity: 0; /* 透明にする */
+    background-color: #000; /* 背景色 */
+    color: yellow; /* テキストの色 */
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -5px; /* ツールチップの位置 */
+    left: 120px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tooltip-text-p::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent; /* 矢印を作成 */
+}
+
+.image-container:hover .tooltip-text-p {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
 }
