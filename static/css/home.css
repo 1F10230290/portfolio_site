@@ -71,14 +71,14 @@ body {
 
 .prev-btn{
     position:relative;
-    top: 80px;
-    left: 150px;
+    top: 60px;
+    left: 130px;
 }
 
 .next-btn{
     position:relative;
-    top: 80px;
-    right: 150px;
+    top: 60px;
+    right: 130px;
 }
 
 
@@ -89,10 +89,10 @@ body {
 
 .works_item {
     position: absolute; /* ここはそのまま */
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 200px;
+    height: 170px;
     opacity: 0; /* 初期状態で非表示 */
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     z-index: 1; /* 重なり順 */
@@ -152,4 +152,58 @@ body {
 .Profile:hover{
     transform: scale(1.03); /* 画像を10%大きくする */
     cursor: pointer; /* クリックできることを強調 */
+}
+
+.controller_btn_A,
+.controller_btn_B,
+.controller_btn_X,
+.controller_btn_Y {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.controller_btn_A{
+    font-size: 30px;
+    border-radius: 90%;
+    color: #000008;
+    background-color: #0E192E;
+    bottom: 147px;
+    right: 22px;
+}
+
+.controller_btn_B{
+    font-size: 30px;
+    border-radius: 90%;
+    color: #000008;
+    background-color: #0E192E;
+    bottom: 117px; /* 下部の位置 */
+    right: 52px;  /* 左の位置 */
+}
+
+.controller_btn_Y{
+    font-size: 30px;
+    border-radius: 90%;
+    color: #000008;
+    background-color: #0E192E;
+    bottom: 147px;
+    right: 81px;
+}
+
+.controller_btn_X{
+    font-size: 30px;
+    border-radius: 90%;
+    color: #000008;
+    background-color: #0E192E;
+    bottom: 175px;
+    right: 52px;
 }

@@ -13,7 +13,8 @@
     <a href="{% url 'Achievements' %}"><img id="content-image" src="{% static 'img/Achievements.png' %}" alt="Achievements" class="Achievements"></a>
 
     <div class="image-container">
-      <img id="content-image" src="{% static 'img/Game_screen.png' %}" alt="Game_screen" class="Game_screen">
+      <div class="Game_screen">
+      <img id="content-image" src="{% static 'img/Game_screen.png' %}" alt="Game_screen">
       <div id="overlay-text" class="overlay-text">松原 有泰が制作した物</div>
       <div id="myElement" class="fadein">
         <a href="{% url 'Works_game' %}"><img src="{% static 'img/Works/Works_Game.png' %}" alt="Works 1" class="works_item active"></a>
@@ -25,6 +26,12 @@
           <button class="prev-btn">←</button>
           <button class="next-btn">→</button>
         </div>
+
+        <button class="controller_btn_A">A</button>
+        <button class="controller_btn_B">B</button>
+        <button class="controller_btn_Y">Y</button>
+        <button class="controller_btn_X">X</button>
+      </div>
     </div>
 
     <a href="{% url 'Profile' %}"><img id="content-image" src="{% static 'img/Profile.png' %}" alt="Profile" class="Profile"></a>
