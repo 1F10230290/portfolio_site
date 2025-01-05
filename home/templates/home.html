@@ -14,19 +14,12 @@
 
     <div class="image-container">
       <div class="Game_screen">
-      <img id="content-image" src="{% static 'img/Game_screen.png' %}" alt="Game_screen">
-      <div id="overlay-text" class="overlay-text">松原 有泰が制作した物</div>
-      <div id="myElement" class="fadein">
-        <a href="{% url 'Works_game' %}"><img src="{% static 'img/Works/Works_Game.png' %}" alt="Works 1" class="works_item active"></a>
-        <img src="{% static 'img/Works/Works_App.png' %}" alt="Works 2" class="works_item">
-        <img src="{% static 'img/Works/Works_UXDesign.png' %}" alt="Works 3" class="works_item">
-        <img src="{% static 'img/Works/Works_Other.png' %}" alt="Works 4" class="works_item">        
-      </div>
-        <div class="button-container">
-          <button class="prev-btn">←</button>
-          <button class="next-btn">→</button>
+        <a href="{% url 'Works_game' %}"><img id="content-image" src="{% static 'img/Game_screen.png' %}" alt="Game_screen"></a>
+        <span class="tooltip-text">松原 有泰が制作した物</span>
+      
+        <div id="myElement" class="fadein">
+          <img src="{% static 'img/Works/Game_Screen.png' %}" alt="Works 1" class="works_item active">
         </div>
-
         <button class="controller_btn_A">A</button>
         <button class="controller_btn_B">B</button>
         <button class="controller_btn_Y">Y</button>

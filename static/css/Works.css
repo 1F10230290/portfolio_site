@@ -6,16 +6,20 @@ body {
     margin: 0;
     position: relative;
     background-color: black;
+    
 }
 
-#title {
+.title {
     color: aqua;
-    position: absolute;
-    top: 2%;
+    position: relative;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 45px;
+    text-align: center;
+    width: 100%;
 }
+
 
 
 .back-btn {
@@ -36,6 +40,9 @@ body {
     width: 100%; 
     margin: 0 auto;
     position: relative; 
+    right: 10%;
+    top: 50px;
+    text-align: left;
 }
 
 
@@ -45,95 +52,18 @@ body {
     background-color: lightblue; /* 見やすいように背景を設定 */
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    top: 3%; /* 画面上部からの位置 */
-    left: 100px;
-}
 
-.slides {
+.works_contents{
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    
-}
-
-.slide {
-    height: 300px;
-    width: auto;
-    display: none;
-    border: 2px solid grey;
-}
-
-.slide.active {
-    display: block;
-}
-
-.dots {
-    text-align: center;
-    margin-top: 10px; /* 写真とドットの間隔 */
-    position: relative; /* スライダー内に配置 */
-    right: 60px;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: lightgray;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: gray;
+    margin-top: 150px;
 }
 
 
-.explanation-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 100%;
-    max-width: 800px; 
-    margin: 0 auto;
-}
+.Design{
+    height: auto;
+    width: 180px;
 
-.explanation-box, .explanation-box_me {
-    position: relative;
-    margin-left: 100px;
-    margin-right: 100px;
-    border: 2px solid gray;
-    top:20px
-}
-
-
-
-.explanation-box h2{
-    margin: 0;
     padding: 0;
-    background-color: aqua;
-    padding-right: 10px;
-    text-align: center;
-}
-
-
-
-.explanation-box_me h2 {
-    margin: 0;
-    padding: 0;
-    background-color: aqua;
-    padding-right: 10px;
-    text-align: center;
-}
-
-.explanation-box p {
-    color: white;
-}
-
-.explanation-box_me p {
-    color: white;
+    justify-content: center;
+    align-items: center;
 }

@@ -11,13 +11,25 @@
 
   <body>
     <a href="{% url 'home' %}"><img src="{% static 'img/Arrow.png' %}" class="back-btn"></a>
-    <h1 id="title">ゲーム作品</h1>
+    <div class="Works_cintainer">
+      <div class="works_contents">
+        <h1 class="title">ゲーム作品</h1>
+        <div class="container">
+          <a href="{% url 'Harusion' %}"><img src="{% static 'img/Game/Harusion.png' %}" class="Game"></a>
+          <a href="{% url 'GBW' %}"><img src="{% static 'img/Game/Get-Back-Winter.png' %}" class="Game"></a>
+          <a href="{% url 'Collider' %}"><img src="{% static 'img/Game/Collider.png' %}" class="Game"></a>
+          <a href="{% url 'E_Racer' %}"><img src="{% static 'img/Game/E-Racer.png' %}" class="Game"></a>
+        </div>
+      </div>
 
-    <div class="container">
-      <a href="{% url 'Harusion' %}"><img src="{% static 'img/Game/Harusion.png' %}" class="Game"></a>
-      <a href="{% url 'GBW' %}"><img src="{% static 'img/Game/Get-Back-Winter.png' %}" class="Game"></a>
-      <a href="{% url 'Collider' %}"><img src="{% static 'img/Game/Collider.png' %}" class="Game"></a>
-      <a href="{% url 'E_Racer' %}"><img src="{% static 'img/Game/E-Racer.png' %}" class="Game"></a>
+      <div class="works_contents">
+        <h1 class="title">UXデザイン</h1>
+        <div class="container">
+          <a href="{% url 'Harusion' %}"><img src="{% static 'img/contents/Booscuit.png' %}" class="Design"></a>
+          <a href="{% url 'GBW' %}"><img src="{% static 'img/contents/Imagination_Hat.png' %}" class="Design"></a>
+          <a href="{% url 'Collider' %}"><img src="{% static 'img/contents/BERRY.png' %}" class="Design"></a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
