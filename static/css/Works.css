@@ -18,6 +18,7 @@ body {
     font-size: 45px;
     text-align: center;
     width: 100%;
+    margin-top: 70px;
 }
 
 
@@ -47,6 +48,7 @@ body {
 
 
 .Game {
+    margin-top: 50px;
     height: 200px;
     width: 200px;
     background-color: lightblue; /* 見やすいように背景を設定 */
@@ -60,10 +62,29 @@ body {
 
 
 .Design{
+    margin-top: 50px;
     height: auto;
     width: 180px;
-
     padding: 0;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .title{
+        font-size: 30px;
+    }
+    .back-btn {
+        height: 80px;
+        width: auto;
+    }
+    .Game {
+        height: 105px;
+        width: 105px;
+        background-color: lightblue; /* 見やすいように背景を設定 */
+    }
+    .Design{
+        width: 105px;
+        height: auto;
+    }
 }

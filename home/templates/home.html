@@ -10,13 +10,16 @@
   </head>
 
   <body>
+    <div class="left-image">
     <div class="image-container">
       <span class="tooltip-text-a">松原 有泰の実績</span>
       <a href="{% url 'Achievements' %}">
         <img id="content-image" src="{% static 'img/Achievements.png' %}" alt="Achievements" class="Achievements">
       </a>
     </div>
+    </div>
 
+    <div class="center-image">
     <div class="image-container">
       <div class="Game_screen">
         <a href="{% url 'Works_game' %}"><img id="content-image" src="{% static 'img/Game_screen.png' %}" alt="Game_screen"></a>
@@ -25,18 +28,22 @@
         <div id="myElement" class="fadein">
           <a href="{% url 'Works_game' %}"><img src="{% static 'img/Works/Game_Screen.png' %}" alt="Works 1" class="works_item active"></a>
         </div>
+        <!--
         <button class="controller_btn_A">A</button>
         <button class="controller_btn_B">B</button>
         <button class="controller_btn_Y">Y</button>
         <button class="controller_btn_X">X</button>
+        -->
       </div>
     </div>
+    </div>
 
+    <div class="right-image">
     <div class="image-container">
       <span class="tooltip-text-p">松原 有泰のプロフィール</span>
     <a href="{% url 'Profile' %}"><img id="content-image" src="{% static 'img/Profile.png' %}" alt="Profile" class="Profile"></a>
     </div>
-
+    </div>
 
   </body>
 </html>

@@ -160,7 +160,7 @@ body {
     cursor: pointer; /* クリックできることを強調 */
 }
 
-.controller_btn_A,
+/*.controller_btn_A,
 .controller_btn_B,
 .controller_btn_X,
 .controller_btn_Y {
@@ -192,8 +192,8 @@ body {
     border-radius: 90%;
     color: #000008;
     background-color: #0E192E;
-    bottom: 117px; /* 下部の位置 */
-    right: 52px;  /* 左の位置 */
+    bottom: 117px;
+    right: 52px;
 }
 
 .controller_btn_Y{
@@ -319,4 +319,15 @@ body {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .left-image{
+        position: absolute;
+        bottom: -70px;
+    }
+    .right-image{
+        position: absolute;
+        bottom: -30px;
+    }
 }

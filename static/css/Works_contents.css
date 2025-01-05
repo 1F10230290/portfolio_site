@@ -140,3 +140,34 @@ body {
 .explanation-box_me p {
     color: white;
 }
+
+@media (max-width: 768px) {
+    #title{
+        font-size: 30px;
+    }
+    .back-btn {
+        height: 80px;
+        width: auto;
+    }
+    .slide {
+        width: 45%; /* 固定値を相対値に変更 */
+        height: auto;
+        position:fixed;
+        left: 25px;
+        top: 150px;
+    }
+
+    .dots{
+        position: fixed;
+        top: 320px;
+        left: -250px;
+    }
+    .explanation-container {
+        width: 90%; /* 画面幅に応じたサイズ調整 */
+    }
+
+    .explanation-box, .explanation-box_me {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
