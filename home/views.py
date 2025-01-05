@@ -25,3 +25,12 @@ def Achievements(request):
 
 def Profile(request):
     return render(request, 'Profile.html')
+
+def Booscuit(request):
+    return render(request, 'Booscuit.html')
+
+def Imagination_Hat(request):
+    return render(request, 'Imagination_Hat.html')
+
+def BERRY(request):
+    return render(request, 'BERRY.html')

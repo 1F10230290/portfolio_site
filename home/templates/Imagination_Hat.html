@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/Works_contents.css' %}">
+    <script src="{% static 'js/Works.js' %}"></script>
+    <title>Timeline</title>
+  </head>
+
+  <body>
+    <a href="{% url 'Works_game' %}"><img src="{% static 'img/Arrow.png' %}" class="back-btn"></a>
+    <h1 id="title">Collider</h1>
+
+    <div class="slider">
+      <div class="slides">
+        <img src="{% static 'img/Collider/Photo1.png' %}" alt="Photo 1" class="slide active">
+        <img src="{% static 'img/Collider/Photo2.png' %}" alt="Photo 2" class="slide">
+        <img src="{% static 'img/Collider/Photo3.png' %}" alt="Photo 3" class="slide">
+        <img src="{% static 'img/Collider/Photo4.png' %}" alt="Photo 4" class="slide">
+        <img src="{% static 'img/Collider/Photo5.png' %}" alt="Photo 5" class="slide">
+        <img src="{% static 'img/Collider/Photo6.png' %}" alt="Photo 6" class="slide">
+        <img src="{% static 'img/Collider/Photo7.png' %}" alt="Photo 7" class="slide">
+        <img src="{% static 'img/Collider/Photo8.png' %}" alt="Photo 8" class="slide">
+        <img src="{% static 'img/Collider/Photo9.png' %}" alt="Photo 9" class="slide">
+        <img src="{% static 'img/Collider/Photo10.png' %}" alt="Photo 10" class="slide">
+
+      </div>
+      <div class="dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+      </div>
+    </div>
+
+    <div class="explanation-container">
+      <div class="explanation-box">
+        <h2>説明</h2>
+        <p>ここに説明文を追加します。</p>
+      </div>
+      <div class="explanation-box_me">
+        <h2>私が関わった部分</h2>
+        <p>ここに説明文を追加します。</p>
+      </div>
+      <div class="explanation-box_me">
+        <h2>使用ツール</h2>
+        <p>ツールの名前</p>
+      </div>
+    </div>
+    
+  </body>
+</html>
