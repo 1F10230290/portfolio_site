@@ -99,3 +99,72 @@ body {
     left: -60px;
     top: 40px;
 }
+
+.container p {
+    word-wrap: break-word; /* 古いブラウザ向け */
+    overflow-wrap: break-word; /* 推奨される最新プロパティで改行 */
+    white-space: normal; /* 必要に応じて改行 */
+    max-width: 80%; /* コンテナ幅に収める */
+    line-height: 1.5; /* 読みやすさを向上させる */
+    margin-bottom: 10px; /* 段落間の余白を調整 */
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #title {
+        font-size: 27px;
+        position: absolute;
+        top: 20px;
+    }
+
+    .back-btn {
+        height: 80px;
+        width: auto;
+    }
+
+    .topic h2{
+        margin-bottom: 20px;
+    }
+
+    .Achievements-container {
+        position: relative;
+        top: 3px;
+    }
+
+    .Achievements-container h2 {
+        font-size: 15px; /* モバイル向けにフォントサイズを調整 */
+        line-height: 1.4; /* モバイルで読みやすく */
+        margin-bottom: 30px;
+    }
+
+    .Achievements-container h3 {
+        font-size: 15px; /* モバイル向けにフォントサイズを調整 */
+        line-height: 1.4; /* モバイルで読みやすく */
+    }
+
+    .Achievements-container p {
+        font-size: 10px; /* モバイル向けにフォントサイズを調整 */
+        line-height: 1.4; /* モバイルで読みやすく */
+    }
+    .personal_info{
+        position: absolute;
+        bottom: -120px;
+        right: 30px;
+        margin-bottom: 0px;
+        text-align: left;
+        margin: 5px 0;
+    }
+    #Face_photo{
+        width: 100%; /* 画像の幅を画面に合わせる */
+        width: 200px; /* 必要なら最大幅を指定 */
+        height: auto;
+        margin-right: 10px; /* マージンを調整 */
+        margin-left: 100px;
+        position: relative;
+        left: -80px;
+        top: -30px;
+    }
+}
