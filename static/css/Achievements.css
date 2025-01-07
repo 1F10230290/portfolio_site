@@ -30,7 +30,7 @@ body {
 .Achievements-container{
     position: relative;
     top: 80px;
-    left: 100px;
+    left: 300px;
 }
 
 .Award{
@@ -48,13 +48,14 @@ body {
     text-align: left;
     position: relative;
     top:-25px;
+
 }
 
 .container p {
     word-wrap: break-word; /* 古いブラウザ向け */
     overflow-wrap: break-word; /* 推奨される最新プロパティで改行 */
     white-space: normal; /* 必要に応じて改行 */
-    max-width: 80%; /* コンテナ幅に収める */
+    max-width: 60%; /* コンテナ幅に収める */
     line-height: 1.5; /* 読みやすさを向上させる */
     margin-bottom: 10px; /* 段落間の余白を調整 */
 }
